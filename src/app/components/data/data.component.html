@@ -1,0 +1,19 @@
+<div class="container">
+    <table class="table table-bordered table-responsive table-striped">
+        <thead>
+            <tr>
+                <th></th>
+                <th scope="col" *ngFor="let month of _salesData.data.labels">{{month}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let rowIdx of _salesData.data.datasets">
+                <th scope="row" class="text-center">{{rowIdx.label}}</th>
+                <td scope="row" class="text-center" *ngFor="let monthValue of rowIdx.data">{{monthValue}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
+<button class="btn btn-success btn-block" (click)="setValues()">Generate values</button>
+<br>

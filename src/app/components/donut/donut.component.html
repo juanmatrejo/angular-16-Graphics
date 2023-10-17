@@ -1,0 +1,15 @@
+<div class="row col-md-12">
+    <div class="chart-container col-md-6" style="position: relative; margin: auto; height: 75vh; width: 75vw;">
+        <canvas id="_canvasDoughnut">
+            {{_chartDoughnut}}
+        </canvas>
+    </div>
+    <div class="chart-container col-md-6" style="position: relative; margin: auto; height: 75vh; width: 75vw;">
+        <canvas id="_canvasPie">
+            {{_chartPie}}
+        </canvas>
+    </div>
+</div>
+<br>
+<button class="btn btn-warning btn-block" (click)="showValues()">Show values</button>
+<br>
